@@ -2,6 +2,31 @@
 
 ---
 
+## **What is GraphQL**
+
+- it is an alternative to REST for building Web APIs
+- With GraphQL, clients can send queries to the server that specify exactly what they need
+  - this allows clients to reduce the amount of data they need to retrieve and can improve the performance of the application
+- It also **supports real-time data updates** using WebSockets, which can be useful for applications that require real-time data, such as chat applications or financial trading platforms
+
+## **Advantage of GraphQL over REST**
+
+1. **Efficient data retrieval**
+   - allows client to specify exactly what data they need
+2. **Strongly-typed schema**
+   - provides a clear and well defined contract between the client and the server
+   - With REST, schema is oftet implicit and loosely defined, which can lead to confusion and errors
+3. **Query batching**
+   - multiple queries can be batched into a single request
+     - reducing the number of round trips and improving performance
+     - useful for mobile applications or other scenarios where network connectivity may be slow or intermittent
+4. **Field Level Granularity**
+   - Give clients more control over the data they receive
+5. **Evolutionary API design**
+   - with graphQl, the server can evolve the API schema over time without breaking existing clients. With REST, changes to the API schema can often break existing clients and require versioning
+
+---
+
 ## GUIDE:
 
 #### _**NOTE:** Issue encountered during these project. Can not start application server, always terminate. Solution was to copy pom.xml generated in the spring.starter.io. Issue was with Spring WebFlux from Reactive Spring in vscode_
