@@ -9,6 +9,8 @@
   - this allows clients to reduce the amount of data they need to retrieve and can improve the performance of the application
 - It also **supports real-time data updates** using WebSockets, which can be useful for applications that require real-time data, such as chat applications or financial trading platforms
 
+---
+
 ## **Advantage of GraphQL over REST**
 
 1. **Efficient data retrieval**
@@ -24,6 +26,21 @@
    - Give clients more control over the data they receive
 5. **Evolutionary API design**
    - with graphQl, the server can evolve the API schema over time without breaking existing clients. With REST, changes to the API schema can often break existing clients and require versioning
+
+---
+
+## WebSockets vs HTTP
+
+|               | WebSockets                                                                                                            | HTTP                                                                     |
+| :------------ | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Connection    | Persistent, bidirectional connection between client and server                                                        | Request-Response based connection                                        |
+|               | keeps the connection open after the initial handshake, allowing data to be transmitted in both directions at any time | requires new connection to be established for each request               |
+| Latency       | Low latency, real-time communication                                                                                  | Higher latency due to request-response model                             |
+| Overhead      | Lower overhead, as data is sent in binary format                                                                      | Higher overhead, as data is sent in text format(e.g. JSON, XML)          |
+| Data Transfer | data is sent as raw binary data                                                                                       | data is sent as text, typically in JSON or XML format                    |
+| Security      | Uses SSL/TLS encryption for scure comms                                                                               | Uses SSL/TLS encryption for scure comms                                  |
+| Scalability   | Can support a large number of concurrent connections                                                                  | Limited by the number of available connections and network bandwidth     |
+| Use Cases     | Real-time communications, gaming, chat apps, financial trading platforms                                              | Traditional web apps, REST APIs, file transfers, static content delivery |
 
 ---
 
